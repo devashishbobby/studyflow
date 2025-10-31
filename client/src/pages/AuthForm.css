@@ -1,0 +1,78 @@
+/* src/pages/AuthForm.css */
+
+.auth-box {
+  background-color: var(--card-background); /* Clean white background */
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border: 1px solid #eee; /* Light border */
+  z-index: 1;
+}
+
+.auth-box h2 {
+  color: #000000; /* Changed to black */
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #000000; /* Changed to black */
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff; /* Changed from light gray to white */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px;
+  color: #000000; /* Changed to black for the text you type */
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color); /* Themed primary color for focus */
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-color); /* Themed primary color */
+  border: none;
+  border-radius: 8px;
+  color: var(--card-background); /* White text */
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: var(--accent-color); /* Themed accent color on hover */
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff; /* White to be visible on the image */
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-home:hover {
+    opacity: 1;
+}

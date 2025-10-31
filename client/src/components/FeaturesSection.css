@@ -1,0 +1,63 @@
+/* src/components/FeaturesSection.css */
+.features-section {
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color); /* Ensures light gray background */
+}
+
+.features-section h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--text-color); /* Uses the dark slate text color */
+}
+
+.features-section p {
+  font-size: 20px;
+  color: var(--text-color); /* Uses the dark slate text color */
+  opacity: 0.8; /* Slightly softer than the heading */
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.features-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-background); /* Changed to white */
+  border-radius: 12px;
+  padding: 40px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer, modern shadow */
+  border: none; /* Removed old border */
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #000000; /* <-- This line was changed to pure black */
+}
+
+.btn-touch {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  color: var(--primary-color); /* Themed text color */
+  border: 2px solid var(--primary-color); /* Themed border color */
+}
+
+.btn-touch:hover {
+  background-color: var(--primary-color); /* Themed hover background */
+  color: var(--background-color); /* Themed hover text color */
+}

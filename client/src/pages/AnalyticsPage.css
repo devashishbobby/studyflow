@@ -1,0 +1,81 @@
+/* src/pages/AnalyticsPage.css */
+.analytics-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--primary-color); /* Themed blue background */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Style for the loading text */
+.analytics-page-container.loading {
+  color: var(--card-background); /* White text */
+  font-size: 1.2rem;
+}
+
+.premium-card {
+  background-color: var(--card-background); /* White card background */
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  border: 1px solid #eee; /* Light border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  text-align: center;
+  color: #000000; /* CHANGED: Default text is now black */
+}
+
+.premium-title {
+  color: #000000; /* CHANGED: Title is now black */
+  margin-bottom: 0.5rem;
+}
+
+.premium-subtitle {
+  color: #000000; /* CHANGED: Subtitle is now black */
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+.premium-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.premium-features li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #000000; /* CHANGED: List item text is now black */
+}
+
+.upgrade-btn {
+  background-color: var(--primary-color); /* Themed primary blue button */
+  color: var(--card-background); /* White text */
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.upgrade-btn:hover {
+  opacity: 0.9;
+}
+
+.back-link {
+  color: #000000; /* CHANGED: Back link is now black */
+  opacity: 0.6;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

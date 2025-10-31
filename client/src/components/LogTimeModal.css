@@ -1,0 +1,22 @@
+/* src/components/LogTimeModal.css */
+/* We can re-use many styles from our other modals */
+
+.task-title-highlight {
+  color: #FF7A00;
+  font-style: italic;
+}
+
+.log-time-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.log-time-form input {
+  flex-grow: 1; /* Allow the input to take up available space */
+}
+
+.log-time-form span {
+  color: #aaa;
+}

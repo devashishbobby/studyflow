@@ -1,0 +1,62 @@
+/* src/pages/AnalyticsPage.css */
+.analytics-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  padding: 2rem;
+}
+
+.premium-card {
+  background-color: #1F1F1F;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  border: 1px solid #2a2a2a;
+  max-width: 500px;
+  text-align: center;
+  color: #E0E0E0;
+}
+
+.premium-title {
+  color: #FF7A00;
+  margin-bottom: 0.5rem;
+}
+
+.premium-subtitle {
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.premium-features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.premium-features li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.upgrade-btn {
+  background-color: #FF7A00;
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  color: #aaa;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}

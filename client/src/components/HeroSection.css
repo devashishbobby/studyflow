@@ -1,0 +1,84 @@
+/* src/components/HeroSection.css */
+
+.hero-container {
+  /* The background image is now handled in the JS file, so the 'background' property is removed from here. */
+  /* These properties ensure the inline style from the JS file displays correctly. */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* This adds a dark overlay to ensure the text on top is readable. */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+
+  /* --- Keeping your original layout styles --- */
+  height: calc(100vh - 80px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15vh 20px 25vh 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container > h1 {
+  font-size: 56px;
+  margin-bottom: 16px;
+  color: #fff; /* Solid white text for high contrast */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Shadow makes text pop */
+}
+
+.hero-container > p {
+  font-size: 24px;
+  max-width: 600px;
+  margin-bottom: 32px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* This ensures the text and buttons appear above the background. */
+.hero-container > h1,
+.hero-container > p,
+.hero-container > .hero-btns {
+    z-index: 1;
+}
+
+/* --- Your correct button styles are all here --- */
+.hero-btns {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.btn--primary {
+  background-color: #FF7A00;
+  color: #121212;
+  border: 2px solid #FF7A00;
+}
+
+.btn--primary:hover {
+  background-color: transparent;
+  color: #FF7A00;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #E0E0E0;
+  border: 2px solid #E0E0E0;
+}
+
+.btn--outline:hover {
+  background-color: #E0E0E0;
+  color: #121212;
+}

@@ -1,0 +1,53 @@
+/* src/index.css */
+
+/* ==============================================
+  ===== YOUR NEW COLOR SCHEME IS DEFINED HERE ====
+  ============================================== */
+:root {
+  --primary-color: #1A3D64;      /* Dark Blue for primary elements, buttons */
+  --background-color: #F4F4F4;  /* Light Gray for the main background */
+  --text-color: #0C2B4E;         /* Deepest Navy for main text */
+  --accent-color: #1D546C;       /* Muted Teal/Blue for accents and hovers */
+  --card-background: #ffffff;   /* White for cards and modals */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Applying the new theme colors */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* src/index.css -- Add this to the bottom */
+
+/* First, ensure all buttons have a smooth transition */
+.btn, .btn-touch, .btn-send, .auth-button, .nav-btn-register {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Now, define the hover effect using the accent color */
+.btn:hover, 
+.btn-touch:hover, 
+.btn-send:hover, 
+.auth-button:hover,
+.nav-btn-register:hover {
+  transform: scale(1.05); /* Enlarge the button slightly */
+  /* Using a subtle shadow with your primary color for the glow effect */
+  box-shadow: 0 0 15px var(--primary-color);
+}

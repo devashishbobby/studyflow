@@ -1,0 +1,28 @@
+/* client/src/components/AnalyticsDashboard.css */
+
+.analytics-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #FF7A00;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 400px; /* You can adjust this height */
+  width: 100%;
+}
+
+.no-data-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #aaa;
+    font-size: 1.1rem;
+}

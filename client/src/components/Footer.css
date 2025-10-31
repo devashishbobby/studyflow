@@ -1,0 +1,9 @@
+/* src/components/Footer.css */
+.footer-container {
+  background: var(--primary-color); /* Applied your theme's primary color */
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid var(--accent-color); /* Matching border */
+  color: var(--background-color); /* Light text for contrast */
+  opacity: 0.8; /* Subtle and clean */
+}

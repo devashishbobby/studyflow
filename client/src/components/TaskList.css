@@ -1,0 +1,159 @@
+/* src/components/TaskList.css */
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.task-list-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color); /* This should now correctly be dark slate */
+}
+
+.add-task-btn {
+  background-color: var(--primary-color); /* Themed primary color */
+  color: var(--card-background); /* Light text */
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-bottom: 4px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.add-task-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--primary-color); /* Themed shadow color */
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee; /* Light border */
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc; /* Lighter border */
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-checkbox.completed {
+  background-color: var(--primary-color); /* Themed primary color */
+  border-color: var(--primary-color);
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-details span:first-child { /* Targets the task title */
+  color: #000000; /* FORCE BLACK TEXT */
+}
+
+.completed-text {
+  text-decoration: line-through;
+  color: #000000; /* Black text for completed tasks, with strike-through */
+  opacity: 0.5;
+}
+
+.task-subject {
+  font-size: 0.8rem;
+  color: #000000; /* FORCE BLACK TEXT for the subject */
+  opacity: 0.6;
+  margin-top: 2px;
+}
+
+.task-item-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.log-time-btn, .delete-task-btn, .edit-task-btn {
+  background: none;
+  border: none;
+  color: var(--text-color); /* Should now be dark slate from dashboard.css */
+  opacity: 0.4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.log-time-btn:hover, .edit-task-btn:hover {
+  color: var(--primary-color);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.delete-task-btn:hover {
+  color: #ef4444; /* Red for delete */
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.no-tasks-message {
+  color: var(--text-color); /* Should now be dark slate from dashboard.css */
+  opacity: 0.7;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Styles for the new edit form */
+.task-edit-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-input {
+  flex-grow: 1;
+  background-color: var(--background-color);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: var(--text-color); /* Should now be dark slate */
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.edit-input.subject {
+  flex-grow: 0.5;
+}
+
+.edit-action-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.edit-action-btn.save { color: #22c55e; } /* Green for save */
+.edit-action-btn.cancel { color: #ef4444; } /* Red for cancel */

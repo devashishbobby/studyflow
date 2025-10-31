@@ -1,0 +1,58 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  background: var(--primary-color); /* Applied your theme's primary color */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* A subtle border using your accent color */
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1100px;
+}
+
+.navbar-logo {
+  color: var(--background-color); /* Changed to light theme color for contrast */
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-right-side {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links {
+  color: var(--background-color); /* Changed to light theme color */
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+  opacity: 0.9; /* Slightly transparent for a softer look */
+}
+
+.nav-links:hover {
+  color: var(--background-color);
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.nav-links.active {
+  color: var(--background-color);
+  opacity: 1;
+  font-weight: bold;
+}

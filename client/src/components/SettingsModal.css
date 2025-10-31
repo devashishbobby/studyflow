@@ -1,0 +1,35 @@
+/* src/components/SettingsModal.css */
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-form label {
+  color: #000000; /* Black text */
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.settings-form input {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff; /* CHANGED: White background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px;
+  color: #000000; /* CHANGED: Black text */
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.settings-form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}

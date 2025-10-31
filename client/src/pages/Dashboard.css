@@ -1,0 +1,62 @@
+/* src/pages/Dashboard.css */
+.dashboard-container {
+  background-color: var(--primary-color); /* Themed blue background */
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: var(--card-background); /* Default text is white for the blue background */
+}
+
+.dashboard-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.header-greeting h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--card-background); /* White text */
+}
+
+.header-greeting p {
+  margin: 5px 0 0;
+  color: var(--card-background); /* White text */
+  opacity: 0.7;
+}
+
+.header-actions button {
+  background: none;
+  border: none;
+  color: var(--card-background); /* White text */
+  opacity: 0.6;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 5px;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.header-actions button:hover {
+  color: var(--card-background); /* Bright white on hover */
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* This is the base style for your dashboard widgets */
+.widget-card {
+  background-color: var(--card-background); /* White background */
+  color: var(--text-color); /* ADDED: Sets default text color for widgets to dark slate */
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #eee; /* Light border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow */
+}

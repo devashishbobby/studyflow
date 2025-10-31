@@ -1,0 +1,18 @@
+/* src/pages/LandingPage.css */
+
+/* Define our color scheme for easy reuse */
+:root {
+  --background-color: #121212; /* A very dark grey, almost black */
+  --text-color: #E0E0E0;      /* A light grey for text */
+  --primary-orange: #FF7A00;   /* The bright orange accent */
+  --dark-grey: #1F1F1F;      /* A slightly lighter grey for cards/forms */
+}
+
+/* Apply the theme to the whole page */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
