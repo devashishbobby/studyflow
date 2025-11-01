@@ -5,7 +5,6 @@ const express = require('express');
 const connectDB = require('./config/db');
 const cors = require('cors');
 
-
 // 2. Conditional dotenv configuration for local development
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
@@ -13,36 +12,21 @@ if (process.env.NODE_ENV !== 'production') {
 
 // 3. Initialize Express App
 const app = express();
-app.use(cors({
-  origin: process.env.CORS_ORIGIN, // We will set this variable on Render
-  credentials: true
-}));
 
 // 4. Connect to Database
 connectDB();
 
 // 5. Configure Middleware
 
-// --- START: CORRECT CORS CONFIGURATION ---
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://final-returns-sbl-project.vercel.app'
-];
-
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('This origin is not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD'], // Explicitly allow methods
-  allowedHeaders: ['Content-Type', 'Authorization'],      // Explicitly allow headers
-};
-
-app.use(cors(corsOptions));
-// --- END: ENHANCED CORS CONFIGURATION ---
+// --- START: THE ONLY CORS CONFIGURATION YOU NEED ---
+// This correctly uses your environment variable
+app.use(cors({
+  origin: process.env.CORS_ORIGIN,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+// --- END: CORRECT CORS CONFIGURATION ---
 
 app.use(express.json());
 
