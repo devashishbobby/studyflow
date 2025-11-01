@@ -5,6 +5,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const cors = require('cors');
 
+
 // 2. Conditional dotenv configuration for local development
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
@@ -12,6 +13,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 // 3. Initialize Express App
 const app = express();
+app.use(cors({
+  origin: process.env.CORS_ORIGIN, // We will set this variable on Render
+  credentials: true
+}));
 
 // 4. Connect to Database
 connectDB();
