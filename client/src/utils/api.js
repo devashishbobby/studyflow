@@ -1,24 +1,26 @@
-// client/src/utils/api.js -- DEBUGGING VERSION
+// client/src/utils/api.js
 import axios from 'axios';
 
+// This is the line we are fixing.
+// It will now use your Vercel environment variable.
+const baseURL = process.env.REACT_APP_API_URL 
+                ? `${process.env.REACT_APP_API_URL}/api` // For production (Vercel)
+                : 'http://localhost:5000/api';          // For local development
+
 const api = axios.create({
-  baseURL: 'https://protrack-api.onrender.com/api',
+  baseURL: baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// This is the magic part: an "interceptor" that runs before every request
+// This interceptor is correct and will attach your login token.
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
-    console.log(`--- Interceptor: Attaching token? ---`, { tokenExists: !!token }); // Log if token exists
-
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;
     }
-
-    console.log('--- Outgoing Request Headers ---', config.headers); // Log the final headers
     return config;
   },
   (error) => {
